@@ -1,6 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
 import { RMF } from '../../../../dist/index.mjs';
-import { ErrorMessage, TextField } from '~/components';
+import { ErrorMessage, SubmitButton, TextField } from '~/components';
 import { rules } from '~/utils';
 
 export const meta: MetaFunction = () => {
@@ -60,7 +60,7 @@ export default function Index() {
         )}
       />
 
-      <button type="submit">Submit</button>
+      <SubmitButton />
     </RMF.Form>
   );
 }

@@ -2,8 +2,10 @@
   "name": "react-mini-form",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "scripts": {
+    "build": "tsup --config tsup.config.ts",
     "lint": "npm run lint:eslint && npm run lint:type-check && npm run lint:format",
     "lint:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint ./src",
     "lint:eslint:fix": "npm run lint:eslint -- --fix",
@@ -11,9 +13,15 @@
     "lint:format": "prettier ./src --check",
     "lint:format:fix": "prettier ./src --write"
   },
+  "files": [
+    "./dist/index.d.mts",
+    "./dist/index.mjs",
+    "./dist/index.mjs.map"
+  ],
   "author": "Kazuhiro Mimaki",
   "license": "MIT",
   "devDependencies": {
+    "@swc/core": "^1.6.13",
     "@types/react": "^18.3.3",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "eslint": "^8.38.0",
@@ -24,6 +32,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.2.5",
     "react": "^18.0.2",
+    "tsup": "^8.1.1",
     "typescript": "^5.5.3"
   },
   "peerDependencies": {

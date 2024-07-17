@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
-import { RMF } from '../../../../src';
+import { RMF } from '../../../../dist/index.mjs';
 import { ErrorMessage, TextField } from '~/components';
 import { rules } from '~/utils';
 

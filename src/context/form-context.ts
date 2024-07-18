@@ -1,8 +1,8 @@
 import { createContext } from 'react';
-import { Rule } from '../types';
+import { FormValues, Rule } from '../types';
 
 export type FormContextType = {
-  formValues: Record<string, unknown>;
+  formValues: FormValues;
   fieldErrors: Record<string, string>;
   touchedFields: Record<string, boolean>;
   validateField: (name: string, value: unknown) => void;

@@ -1,13 +1,13 @@
 import { ChangeEvent, FocusEvent, useContext, useEffect } from 'react';
 import { FormContext } from '../context';
-import { Rule } from '../types';
+import { FieldInput, Rule } from '../types';
 
 type RenderProp = {
   name: string;
   value?: string;
   defaultValue?: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onBlur: (e: FocusEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<FieldInput>) => void;
+  onBlur: (e: FocusEvent<FieldInput>) => void;
 };
 
 type Props = {
@@ -40,7 +40,7 @@ export const Controller = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<FieldInput>) => {
     formValues[name] = e.target.value;
     Object.keys(touchedFields).forEach((fieldName) => {
       const value = formValues[fieldName];
@@ -48,7 +48,7 @@ export const Controller = ({
     });
   };
 
-  const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (e: FocusEvent<FieldInput>) => {
     touchField(name);
     validateField(name, e.target.value);
   };

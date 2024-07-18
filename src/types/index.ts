@@ -1,5 +1,11 @@
-type FormValues = Record<string, unknown>;
+export type FormValues = Record<string, unknown>;
 
-type RuleError = { error: string };
+export type Rule = (
+  value: unknown,
+  formValues: FormValues,
+) => true | { error: string };
 
-export type Rule = (value: unknown, formValues: FormValues) => true | RuleError;
+export type FieldInput =
+  | HTMLInputElement
+  | HTMLTextAreaElement
+  | HTMLSelectElement;

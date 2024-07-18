@@ -1,5 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
-import { RealeForm } from '../../../../dist/index.mjs';
+import { RealeForm } from 'reale-form';
+
 import {
   ErrorMessage,
   Select,

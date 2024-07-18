@@ -1,7 +1,6 @@
 {
   "name": "reale-form",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {

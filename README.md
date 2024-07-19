@@ -10,6 +10,8 @@ A form library built for [React](https://react.dev/).
 - 🚧 (Under development) Supports nested objects 🚧
 
 ## Demo
+https://github.com/user-attachments/assets/69b0cbaf-f996-4fd8-b899-dc66875e3b3c
+
 To run `sample-app`:
 
 ```

@@ -15,6 +15,16 @@ A form library built for [React](https://react.dev/).
 npm install reale-form
 ```
 
+## Demo
+To run `sample-app`:
+
+```
+git clone https://github.com/Kazuhiro-Mimaki/reale-form
+cd ./reale-form
+npm install
+npm run sample-app
+```
+
 ## Quick Start
 
 ```tsx

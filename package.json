@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
+  "repository":"https://github.com/Kazuhiro-Mimaki/reale-form",
   "scripts": {
     "build": "tsup --config tsup.config.ts",
     "lint": "npm run lint:eslint && npm run lint:type-check && npm run lint:format",

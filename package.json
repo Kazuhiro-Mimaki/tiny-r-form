@@ -10,7 +10,8 @@
     "lint:eslint:fix": "npm run lint:eslint -- --fix",
     "lint:type-check": "tsc --noEmit",
     "lint:format": "prettier . --check",
-    "lint:format:fix": "prettier . --write"
+    "lint:format:fix": "prettier . --write",
+    "sample-app": "npm --prefix ./examples/remix install && npm --prefix ./examples/remix run dev"
   },
   "files": [
     "./dist/index.d.mts",

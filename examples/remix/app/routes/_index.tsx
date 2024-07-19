@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <RealeForm.Form>
       <div className="my-12 w-1/3 mx-auto flex flex-col gap-y-6 justify-center items-center">
-        <h1 className="font-bold text-3xl">Real Form Example</h1>
+        <h1 className="font-bold text-3xl">Reale Form Example</h1>
 
         <div className="w-full">
           <label htmlFor="userName">user name</label>

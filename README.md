@@ -9,12 +9,6 @@ A form library built for [React](https://react.dev/).
 - No dependencies for some validation libraries
 - 🚧 (Under development) Supports nested objects 🚧
 
-## Install
-
-```shell
-npm install reale-form
-```
-
 ## Demo
 To run `sample-app`:
 
@@ -23,6 +17,14 @@ git clone https://github.com/Kazuhiro-Mimaki/reale-form
 cd ./reale-form
 npm install
 npm run sample-app
+```
+
+# Get started
+
+## Install
+
+```shell
+npm install reale-form
 ```
 
 ## Quick Start

@@ -7,8 +7,8 @@ import {
   SubmitButton,
   TextField,
   Textarea,
-} from '~/components';
-import { rules } from '~/utils';
+} from '../components';
+import { rules } from '../utils';
 
 export const meta: MetaFunction = () => {
   return [
@@ -20,15 +20,17 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <RealeForm.Form>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <div>
+      <div className="my-12 w-1/3 mx-auto flex flex-col gap-y-6 justify-center items-center">
+        <h1 className="font-bold text-3xl">Real Form Example</h1>
+
+        <div className="w-full">
           <label htmlFor="userName">user name</label>
           <RealeForm.Controller
             name="userName"
             defaultValue="John Doe"
             rule={rules.userName}
             render={(field, error) => (
-              <div>
+              <div className="w-full">
                 <TextField
                   {...field}
                   type="text"
@@ -40,7 +42,7 @@ export default function Index() {
             )}
           />
         </div>
-        <div>
+        <div className="w-full">
           <label htmlFor="userName">password</label>
           <RealeForm.Controller
             name="password"
@@ -58,7 +60,7 @@ export default function Index() {
             )}
           />
         </div>
-        <div>
+        <div className="w-full">
           <label htmlFor="userName">password confirm</label>
           <RealeForm.Controller
             name="passwordConfirm"
@@ -76,7 +78,7 @@ export default function Index() {
             )}
           />
         </div>
-        <div>
+        <div className="w-full">
           <label htmlFor="remarks">remarks</label>
           <RealeForm.Controller
             name="remarks"
@@ -89,7 +91,7 @@ export default function Index() {
             )}
           />
         </div>
-        <div>
+        <div className="w-full">
           <label htmlFor="select">select</label>
           <RealeForm.Controller
             name="select"

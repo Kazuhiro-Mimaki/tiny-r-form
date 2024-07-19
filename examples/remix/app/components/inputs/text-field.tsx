@@ -3,5 +3,10 @@ import { InputHTMLAttributes } from 'react';
 type Props = InputHTMLAttributes<HTMLInputElement>;
 
 export const TextField = (props: Props) => {
-  return <input style={{ border: '1px solid #ddd' }} {...props} />;
+  return (
+    <input
+      className="w-full border border-gray-400 p-2 rounded-md"
+      {...props}
+    />
+  );
 };

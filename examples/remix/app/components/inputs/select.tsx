@@ -6,7 +6,7 @@ type Props = SelectHTMLAttributes<HTMLSelectElement> & {
 
 export const Select = ({ options, ...props }: Props) => {
   return (
-    <select {...props}>
+    <select className="w-full border border-gray-400 p-2 rounded-md" {...props}>
       {options.map((option) => (
         <option key={option.id} value={option.value} label={option.label} />
       ))}

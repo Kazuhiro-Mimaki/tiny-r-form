@@ -6,11 +6,11 @@
   "scripts": {
     "build": "tsup --config tsup.config.ts",
     "lint": "npm run lint:eslint && npm run lint:type-check && npm run lint:format",
-    "lint:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint ./src",
+    "lint:eslint": "eslint .",
     "lint:eslint:fix": "npm run lint:eslint -- --fix",
     "lint:type-check": "tsc --noEmit",
-    "lint:format": "prettier ./src --check",
-    "lint:format:fix": "prettier ./src --write"
+    "lint:format": "prettier . --check",
+    "lint:format:fix": "prettier . --write"
   },
   "files": [
     "./dist/index.d.mts",

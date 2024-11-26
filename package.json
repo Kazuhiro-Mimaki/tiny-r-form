@@ -1,6 +1,6 @@
 {
   "name": "tiny-r-form",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "repository": "https://github.com/Kazuhiro-Mimaki/tiny-r-form",

@@ -1,4 +1,4 @@
-# Reale Form
+# TinyRForm
 
 A form library built for [React](https://react.dev/).
 

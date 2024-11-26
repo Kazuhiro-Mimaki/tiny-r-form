@@ -1,9 +1,9 @@
 {
-  "name": "reale-form",
-  "version": "0.0.3",
+  "name": "tiny-r-form",
+  "version": "0.0.0",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
-  "repository":"https://github.com/Kazuhiro-Mimaki/reale-form",
+  "repository": "https://github.com/Kazuhiro-Mimaki/tiny-r-form",
   "scripts": {
     "build": "tsup --config tsup.config.ts",
     "lint": "npm run lint:eslint && npm run lint:type-check && npm run lint:format",

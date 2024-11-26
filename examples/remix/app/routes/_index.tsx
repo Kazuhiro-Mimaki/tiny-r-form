@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
-import { RealeForm } from 'reale-form';
+import { TinyRForm } from 'tiny-r-form';
 
 import {
   ErrorMessage,
@@ -19,13 +19,13 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <RealeForm.Form>
+    <TinyRForm.Form>
       <div className="my-12 w-1/3 mx-auto flex flex-col gap-y-6 justify-center items-center">
         <h1 className="font-bold text-3xl">Reale Form Example</h1>
 
         <div className="w-full">
           <label htmlFor="userName">user name</label>
-          <RealeForm.Controller
+          <TinyRForm.Controller
             name="userName"
             defaultValue="John Doe"
             rule={rules.userName}
@@ -44,7 +44,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="userName">password</label>
-          <RealeForm.Controller
+          <TinyRForm.Controller
             name="password"
             rule={rules.password}
             render={(field, error) => (
@@ -62,7 +62,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="userName">password confirm</label>
-          <RealeForm.Controller
+          <TinyRForm.Controller
             name="passwordConfirm"
             rule={rules.passwordConfirm}
             render={(field, error) => (
@@ -80,7 +80,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="remarks">remarks</label>
-          <RealeForm.Controller
+          <TinyRForm.Controller
             name="remarks"
             rule={rules.remarks}
             render={(field, error) => (
@@ -93,7 +93,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="select">select</label>
-          <RealeForm.Controller
+          <TinyRForm.Controller
             name="select"
             rule={rules.select}
             render={(field, error) => (
@@ -116,6 +116,6 @@ export default function Index() {
 
         <SubmitButton />
       </div>
-    </RealeForm.Form>
+    </TinyRForm.Form>
   );
 }

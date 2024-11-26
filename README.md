@@ -10,13 +10,14 @@ A form library built for [React](https://react.dev/).
 - 🚧 (Under development) Supports nested objects 🚧
 
 ## Demo
+
 https://github.com/user-attachments/assets/69b0cbaf-f996-4fd8-b899-dc66875e3b3c
 
 To run `sample-app`:
 
 ```
-git clone https://github.com/Kazuhiro-Mimaki/reale-form
-cd ./reale-form
+git clone https://github.com/Kazuhiro-Mimaki/tiny-r-form
+cd ./tiny-r-form
 npm install
 npm run sample-app
 ```
@@ -26,13 +27,13 @@ npm run sample-app
 ## Install
 
 ```shell
-npm install reale-form
+npm install tiny-r-form
 ```
 
 ## Quick Start
 
 ```tsx
-import { RealeForm } from 'reale-form';
+import { TinyRForm } from 'tiny-r-form';
 import { z } from 'zod';
 
 /**
@@ -76,8 +77,8 @@ function SubmitButton() {
  */
 function App() {
   return (
-    <RealeForm.Form>
-      <RealeForm.Controller
+    <TinyRForm.Form>
+      <TinyRForm.Controller
         name="userName"
         rule={rules.userName}
         render={(field, error) => (
@@ -87,7 +88,7 @@ function App() {
           </div>
         )}
       />
-      <RealeForm.Controller
+      <TinyRForm.Controller
         name="remarks"
         rule={rules.remarks}
         render={(field, error) => (
@@ -98,7 +99,7 @@ function App() {
         )}
       />
       <SubmitButton />
-    </RealeForm.Form>
+    </TinyRForm.Form>
   );
 }
 ```

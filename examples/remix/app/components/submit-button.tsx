@@ -1,4 +1,4 @@
-import { useFormContext } from 'reale-form';
+import { useFormContext } from 'tiny-r-form';
 
 export const SubmitButton = () => {
   const { hasError } = useFormContext();

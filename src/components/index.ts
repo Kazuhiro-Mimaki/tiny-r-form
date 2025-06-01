@@ -1,7 +1,7 @@
 import { FormProvider } from './form-provider';
-import { Controller } from './controller';
+import { Field } from './field';
 
 export const TinyRForm = {
   Form: FormProvider,
-  Controller,
+  Field,
 };

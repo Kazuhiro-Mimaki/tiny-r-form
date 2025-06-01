@@ -25,7 +25,7 @@ export default function Index() {
 
         <div className="w-full">
           <label htmlFor="userName">user name</label>
-          <TinyRForm.Controller
+          <TinyRForm.Field
             name="userName"
             defaultValue="John Doe"
             rule={rules.userName}
@@ -44,7 +44,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="userName">password</label>
-          <TinyRForm.Controller
+          <TinyRForm.Field
             name="password"
             rule={rules.password}
             render={(field, error) => (
@@ -62,7 +62,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="userName">password confirm</label>
-          <TinyRForm.Controller
+          <TinyRForm.Field
             name="passwordConfirm"
             rule={rules.passwordConfirm}
             render={(field, error) => (
@@ -80,7 +80,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="remarks">remarks</label>
-          <TinyRForm.Controller
+          <TinyRForm.Field
             name="remarks"
             rule={rules.remarks}
             render={(field, error) => (
@@ -93,7 +93,7 @@ export default function Index() {
         </div>
         <div className="w-full">
           <label htmlFor="select">select</label>
-          <TinyRForm.Controller
+          <TinyRForm.Field
             name="select"
             rule={rules.select}
             render={(field, error) => (

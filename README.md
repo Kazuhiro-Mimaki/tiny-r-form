@@ -78,7 +78,7 @@ function SubmitButton() {
 function App() {
   return (
     <TinyRForm.Form>
-      <TinyRForm.Controller
+      <TinyRForm.Field
         name="userName"
         rule={rules.userName}
         render={(field, error) => (
@@ -88,7 +88,7 @@ function App() {
           </div>
         )}
       />
-      <TinyRForm.Controller
+      <TinyRForm.Field
         name="remarks"
         rule={rules.remarks}
         render={(field, error) => (

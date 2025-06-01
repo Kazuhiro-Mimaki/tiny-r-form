@@ -18,7 +18,7 @@ type Props = {
   render: ({ name }: RenderProp, error?: string) => JSX.Element;
 };
 
-export const Controller = ({
+export const Field = ({
   name,
   rule,
   value,

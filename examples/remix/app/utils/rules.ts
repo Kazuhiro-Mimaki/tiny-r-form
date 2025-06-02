@@ -18,10 +18,7 @@ const password = (value: unknown) => {
   return true;
 };
 
-const passwordConfirm = (
-  value: unknown,
-  formValues: Record<string, unknown>,
-) => {
+const passwordConfirm = (value: unknown, formValues: { password: string }) => {
   const validation = z.string().min(1);
   const ret = validation.safeParse(value);
   if (!ret.success) {

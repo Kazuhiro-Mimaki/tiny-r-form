@@ -1,5 +1,5 @@
 import { FormHTMLAttributes, ReactNode, useRef, useState } from 'react';
-import { Rule } from '../types';
+import { FormValues, Rule } from '../types';
 import { parseFormData } from '../utils';
 import { FormContext, FormContextType } from '../context';
 
@@ -31,9 +31,9 @@ export const FormProvider = ({ children, ...props }: Props) => {
     }
   };
 
-  const rules = useRef<Record<string, Rule>>({});
-  const registerRule = (name: string, rule: Rule) => {
-    rules.current[name] = rule;
+  const rules = useRef<Record<string, Rule<FormValues>>>({});
+  const registerRule = <T extends FormValues>(name: string, rule: Rule<T>) => {
+    rules.current[name] = rule as Rule<FormValues>;
   };
 
   const touchedFields = useRef<Record<string, boolean>>({});

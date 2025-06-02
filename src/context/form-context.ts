@@ -6,7 +6,7 @@ export type FormContextType = {
   fieldErrors: Record<string, string>;
   touchedFields: Record<string, boolean>;
   validateField: (name: string, value: unknown) => void;
-  registerRule: (name: string, rule: Rule) => void;
+  registerRule: <T extends FormValues>(name: string, rule: Rule<T>) => void;
   touchField: (name: string) => void;
 };
 

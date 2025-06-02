@@ -27,12 +27,12 @@ export default function Index() {
           <label htmlFor="userName">user name</label>
           <TinyRForm.Field
             name="userName"
-            defaultValue="John Doe"
             rule={rules.userName}
             render={(field, error) => (
               <div className="w-full">
                 <TextField
                   {...field}
+                  defaultValue="John Doe"
                   type="text"
                   autoComplete="userName"
                   required

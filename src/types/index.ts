@@ -1,8 +1,8 @@
 export type FormValues = Record<string, unknown>;
 
-export type Rule = (
+export type Rule<T extends FormValues> = (
   value: unknown,
-  formValues: FormValues,
+  formValues: T,
 ) => true | { error: string };
 
 export type FieldInput =

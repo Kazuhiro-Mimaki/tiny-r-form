@@ -1,24 +1,24 @@
 import { ChangeEvent, FocusEvent, useContext, useEffect } from 'react';
 import { FormContext } from '../context';
-import { FieldInput, Rule } from '../types';
+import { FieldInput, FormValues, Rule } from '../types';
 
 type FieldProps = {
   name: string;
-  value?: string;
-  defaultValue?: string;
   onChange: (e: ChangeEvent<FieldInput>) => void;
   onBlur: (e: FocusEvent<FieldInput>) => void;
 };
 
-type Props = {
+type Props<T extends FormValues> = {
   name: string;
-  rule: Rule;
-  value?: string;
-  defaultValue?: string;
+  rule: Rule<T>;
   render: (fieldProps: FieldProps, error?: string) => JSX.Element;
 };
 
-export const Field = ({ name, rule, value, defaultValue, render }: Props) => {
+export const Field = <T extends FormValues>({
+  name,
+  rule,
+  render,
+}: Props<T>) => {
   const {
     formValues,
     fieldErrors,
@@ -30,7 +30,6 @@ export const Field = ({ name, rule, value, defaultValue, render }: Props) => {
 
   useEffect(() => {
     registerRule(name, rule);
-    formValues[name] = value ?? defaultValue;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -50,8 +49,6 @@ export const Field = ({ name, rule, value, defaultValue, render }: Props) => {
   return render(
     {
       name,
-      value,
-      defaultValue,
       onChange: handleChange,
       onBlur: handleBlur,
     },

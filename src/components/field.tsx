@@ -2,7 +2,7 @@ import { ChangeEvent, FocusEvent, useContext, useEffect } from 'react';
 import { FormContext } from '../context';
 import { FieldInput, Rule } from '../types';
 
-type RenderProp = {
+type FieldProps = {
   name: string;
   value?: string;
   defaultValue?: string;
@@ -15,16 +15,10 @@ type Props = {
   rule: Rule;
   value?: string;
   defaultValue?: string;
-  render: ({ name }: RenderProp, error?: string) => JSX.Element;
+  render: (fieldProps: FieldProps, error?: string) => JSX.Element;
 };
 
-export const Field = ({
-  name,
-  rule,
-  value,
-  defaultValue,
-  render,
-}: Props) => {
+export const Field = ({ name, rule, value, defaultValue, render }: Props) => {
   const {
     formValues,
     fieldErrors,
